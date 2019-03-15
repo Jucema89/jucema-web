@@ -14,14 +14,13 @@ import { HomeBannerComponent } from './componentes/home-banner/home-banner.compo
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { SobremiComponent } from './componentes/sobremi/sobremi.component';
 import { PortafolioComponent } from './componentes/portafolio/portafolio.component';
-import { ServiciosComponent } from './componentes/servicios/servicios.component';
+
 
 // PROCESO DE CONSTANTES PARA EL ROUTEO//
 const routes: Routes = [
   { path: '', component: HomeBannerComponent },
   { path: 'sobremi', component: SobremiComponent },
   { path: 'portafolio', component: PortafolioComponent },
-  { path: 'servicios', component: ServiciosComponent },
   { path: '**', pathMatch: 'full', redirectTo: ''},
 
 
@@ -40,7 +39,6 @@ const routes: Routes = [
     ContactoComponent,
     SobremiComponent,
     PortafolioComponent,
-    ServiciosComponent
   ],
   imports: [
     BrowserModule,
