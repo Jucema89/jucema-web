@@ -23,7 +23,7 @@
     "@popperjs/core": "^2.6.0",
     "bootstrap": "^4.5.3",
     "core-js": "^2.5.4",
-    "jquery": "^2.2.4",
+    "jquery": "^3.5.0",
     "masonry-layout": "^4.2.2",
     "ngx-masonry": "^10.0.6",
     "ngx-toastr": "^13.1.0",
