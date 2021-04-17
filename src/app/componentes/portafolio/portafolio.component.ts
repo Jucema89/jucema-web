@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portafolio.component.css']
 })
 export class PortafolioComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(
+  ) {
+  }
   ngOnInit() {
+
   }
 
 }

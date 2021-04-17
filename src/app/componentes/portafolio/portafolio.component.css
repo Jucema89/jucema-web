@@ -1,0 +1,23 @@
+.iconSmall i {
+    font-size: 15px;
+    color: white;
+    width: 15px;
+}
+.btn-orange {
+    background-color: #f7a416;
+    color: white;
+    border: 1px solid #f7a416;
+}
+.btn-orange:hover {
+    background-color: white;
+    color: #f7a416;
+    border: 1px solid #f7a416;
+}
+.title-projects {
+    padding-top: 90px;
+}
+@media (max-width:991.98px) {
+    .title-projects {
+        padding-top: 100px;
+    }
+}

@@ -2,3 +2,12 @@
     font-size: 25px;
     padding-left: 10px;
 }
+#mobile-nav-toggle i {
+    visibility: hidden;
+}
+
+@media (max-width:991.98px) {
+    #header #logo img {
+        margin-left: 50px;
+    }
+} 

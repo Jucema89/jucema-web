@@ -1,0 +1,197 @@
+#skills-section {
+    padding: 30px 50px 0px 50px;
+    margin: 50px 0px 50px 0px;
+    
+}
+
+.stretch-card>.card {
+    width: 100%;
+    min-width: 100%
+}
+
+.flex {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto
+}
+
+
+.padding {
+    padding: 3rem
+}
+
+.cardSpecial {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none
+}
+
+.cardSpecial {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 12px;
+}
+
+.cardSpecial .cardSpecial-block {
+    padding: 1.25rem
+}
+
+h6 {
+    font-size: 14px !important;
+    font-style: italic;
+}
+h5 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.text-c-green {
+    color: #23cc2c
+}
+.text-c-red {
+    color: red;
+}
+.text-c-yellow {
+    color: #e0d204
+}
+.text-c-orange {
+    color: orangered
+}
+.text-c-purple {
+    color: rgb(54, 4, 54);
+}
+.text-c-blue {
+    color: rgb(22, 141, 238);
+}
+.m-l-10 {
+    margin-left: 10px
+}
+
+.proj-progress-card .progress {
+    height: 6px;
+    overflow: visible;
+    margin-bottom: 10px
+}
+
+.proj-progress-card .progress .progress-bar {
+    position: relative
+}
+
+.progress .progress-bar {
+    height: 100%;
+    color: inherit
+}
+
+.bg-c-red {
+    background: red;
+}
+
+.proj-progress-card .progress .progress-bar.bg-c-red:after {
+    border: 3px solid red
+}
+
+.proj-progress-card .progress .progress-bar:after {
+    content: "";
+    background: #fff;
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px
+}
+
+.bg-c-blue {
+    background: #0fbff5
+}
+
+.proj-progress-card .progress .progress-bar.bg-c-blue:after {
+    border: 3px solid #0fbff5
+}
+
+.proj-progress-card .progress .progress-bar.bg-c-green:after {
+    border: 1px solid #2ed845
+}
+
+.bg-c-green {
+    background: #23cc48
+}
+
+.bg-c-yellow {
+    background: #FFB64D
+}
+
+.proj-progress-card .progress .progress-bar.bg-c-yellow:after {
+    border: 3px solid #FFB64D
+}
+
+.bg-c-dark {
+    background: #272726
+}
+
+.bg-c-orange {
+    background: orangered;
+}
+
+.proj-progress-card .progress .progress-bar.bg-c-dark:after {
+    border: 3px solid #272726
+}
+
+.bg-c-purple {
+    background: rgb(54, 4, 54);
+}
+.proj-progress-card .progress .progress-bar.bg-c-purple:after {
+    border: 3px solid rgb(54, 4, 54);
+}
+
+.m-b-30 {
+    margin-bottom: 30px
+}
+
+.iconSkill {
+    font-size: 60px;
+    text-align: left!important;
+}
+
+.angularIcon {
+    color: red;
+}
+.nodejsIcon {
+    color: green;
+}
+.jsIcon {
+    color: rgb(241, 206, 52)
+}
+.htmlIcon {
+    color: orangered;
+}
+.cssIcon {
+    color: rgb(22, 141, 238)
+}
+.linuxIcon {
+    color: black;
+}
+.bootstrapIcon {
+    color: rgb(54, 4, 54);
+}
+/*@media de celulares*/
+@media (max-width:991.98px) {
+    #skills-section {
+        padding: 30px 50px 0px 50px;
+        margin: 50px 0px 50px 0px;
+        
+    }
+    .cardSpecial .cardSpecial-block {
+        padding: 0px!important
+    }
+}
+
+@media (max-width:767.98px) {
+
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-home-banner',
@@ -10,6 +11,7 @@ export class HomeBannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

@@ -1,10 +1,10 @@
 	<!-- Start Contact Area -->
-	<section class="contact-page-area section-gap">
+	<section class="contact-page-area section-gap" id="contactame">
 		<div class="container">
         <div class="row">
             <div class="col-lg-12">
-              <div class="section-title">
-                <h2>Contactame</h2>
+              <div class="section-title pt-5">
+                <h2>Contáctame</h2>
               </div>
             </div>
           </div>
@@ -15,19 +15,10 @@
 							<span class="lnr lnr-home"></span>
 						</div>
 						<div class="contact-details">
-							<h5>Boyacá Colombia</h5>
+							<h5><img src="assets/img/colombia.png" class="mr-2" width="20px"> Colombia</h5>
 							<p>
-								Dg 10 #9a -39
+								Duitama - Boyacá
 							</p>
-						</div>
-					</div>
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-phone-handset"></span>
-						</div>
-						<div class="contact-details">
-							<h5>+57 311 2117865</h5>
-							<p>Lunes a Viernes 9am a 6pm</p>
 						</div>
 					</div>
 					<div class="single-contact-address d-flex flex-row">
@@ -39,34 +30,87 @@
 							<p>Envíame mails cuando quieras!</p>
 						</div>
 					</div>
+					<div class="single-contact-address d-flex flex-row">
+						<div class="icon">
+							<span class="lnr lnr-phone-handset"></span>
+						</div>
+						<div class="contact-details">
+							<h5>+57 322 7225533</h5>
+							<p>Lunes a Viernes 8am a 6pm</p>
+							<a href="https://api.whatsapp.com/send?phone=573227225533&text=Hola%2C%20deseo%20contratar%20sus%20servicios" target="_blank" class="primary-btn" data-text="WhatsApp" >
+								<span><i class="fab fa-whatsapp"></i></span>
+								<span>_</span>
+								<span>W</span>
+								<span>h</span>
+								<span>a</span>
+								<span>t</span>
+								<span>s</span>
+								<span>A</span>
+								<span>p</span>
+								<span>p</span>
+							</a>
+						</div>
+					</div>
 				</div>
 				<div class="col-lg-8">
-					<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
+					<div id="formSend">
+						<div id="formLoader" class="d-none" >
+							<div class="d-flex justify-content-center">
+								<div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+								  <span class="visually-hidden"></span>
+								</div>
+							  </div>
+						</div>
+						<div id="formSuccess" class="d-none alert alert-success text-center">
+								<svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-check-circle-fill text-center" fill="green" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+								  </svg>
+							<p class="text-center">
+								Mensaje enviado correctamente!!
+							</p>
+						</div>
+						<div id="formError" class="d-none alert alert-danger text-center">
+								<svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-x-circle-fill text-center" fill="red" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+								  </svg>
+							<p class="text-center">
+								Algo salio mal, puedes escribirme a: jucema89@gmail.com
+							</p>
+						</div>
+						
+					</div>
+					<form id="formContact" class="form-area" [formGroup]="formContact" (ngSubmit)="sendMailContact(formContact.value)" class="contact-form text-right">
 						<div class="row">
 							<div class="col-lg-6 form-group form-group-top">
-								<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tu Nombre'"
+								<input formControlName="name" placeholder=" Tu Nombre" onfocus="this.placeholder = 'Tu Nombre'" onblur="this.placeholder = 'Tu Nombre'"
 								 class="common-input mb-20 form-control" required="" type="text">
 
-								<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'Tu Correo'" class="common-input mb-20 form-control" required="" type="email">
-
-								<input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Asunto'"
+								<input formControlName="mail" id="mail" placeholder="Tu Correo" (blur)="validateExistingMail($event.target.value);"
+								 class="common-input mb-20 form-control" type="email">
+								 <small id="mailError" class="d-none invalid-feedback">
+									Este correo ya esta registrado
+								  </small>
+								  <small id="mailSuccess" class="d-none valid-feedback">
+									Correo Valido
+								  </small>
+								  <small id="mailEmpity" class="d-none invalid-feedback">
+									Campo vacio o con errores
+								  </small>
+								<input formControlName="subject" placeholder="Asunto" onfocus="this.placeholder = 'Asunto'" onblur="this.placeholder = 'Asunto'"
 								 class="common-input mb-20 form-control" required="" type="text">
 							</div>
 							<div class="col-lg-6 form-group">
-								<textarea class="common-textarea form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje'"
+								<textarea class="common-textarea form-control" formControlName="msj" placeholder="Mensaje" onfocus="this.placeholder = 'Mensaje'" onblur="this.placeholder = 'Mensaje'"
 								 required=""></textarea>
+								 <br>
+								 <small class="text-muted">
+									Este mensaje se envia gracias a: <a href="https://nodemailer.com/about/" target="_blank">Nodemailer</a> &amp; <a href="https://expressjs.com/" target="_blank">Express js</a>
+								 </small>
 							</div>
 							<div class="col-lg-12">
 								<div class="alert-msg" style="text-align: left;"></div>
 
-								<button class="primary-btn" style="float: right;" data-text="Enviar">
-									<span>E</span>
-									<span>n</span>
-									<span>v</span>
-									<span>i</span>
-									<span>a</span>
-									<span>r</span>
+								<button [disabled]="formContact.invalid" class="btn btn-orange" style="float: right;" type="submit"> Enviar
 								</button>
 							</div>
 						</div>

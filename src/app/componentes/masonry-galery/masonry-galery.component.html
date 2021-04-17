@@ -1,0 +1,14 @@
+<div class="card-columns">
+    <div class="card single-work shadow wow fadeInUp" data-wow-duration="2s"
+        *ngFor="let item of imagesPortfolio">
+        <div class="thumb">
+            <div class="overlay overlay-bg"></div>
+        <img class="card-img" src="{{item.image}}" alt="Card image">
+        </div>
+        <div class="middle">
+            <h4>{{item.titulo}}</h4>
+            <div class="cat">{{item.empresa}}</div>
+        </div>
+        <a class="overlay" target="_blank" href="{{item.url}}"></a>
+    </div>
+</div>

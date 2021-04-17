@@ -1,0 +1,9 @@
+a, a:focus {
+    color: #f7a416!important;
+    text-decoration: none;
+    outline: 0; }
+    a:hover {
+      color: #bd7d0f!important;
+      text-decoration: none;
+      outline: 0;
+    }

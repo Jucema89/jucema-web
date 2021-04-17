@@ -1,0 +1,21 @@
+.sobremi-section {
+    padding: 30px 50px 0px 50px;
+}
+.description {
+    font-size: 18px;
+}
+.card {
+    border: 1px transparent!important;
+}
+/*@media de celulares*/
+@media (max-width:991.98px) {
+    .sobremi-section {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        
+    }
+    .section-title h2 {
+        margin-top:50px;
+    }
+    
+}
